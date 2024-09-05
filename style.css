@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #d7c3c3d1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #7c7575;
+}
+
+/* Container Styles */
+.container {
+  background: #e8b8b8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  text-align: center;
+}
+
+h1 {
+  color: #5d5dff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input Section Styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#task-input,
+#task-date {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #d1d9e6;
+  font-size: 14px;
+}
+
+#task-input:focus,
+#task-date:focus {
+  border-color: #5d5dff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(93, 93, 255, 0.3);
+}
+
+#add-task-btn {
+  padding: 12px;
+  background: #5d5dff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#add-task-btn:hover {
+  background: #2f2f47;
+}
+
+/* Task List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  padding: 14px;
+  background: #eef2f7;
+  border: 2px solid #d1d9e6;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+  background: #e1e7f2;
+  transform: scale(1.02);
+}
+
+li.completed {
+  background: #d1e7dd;
+  text-decoration: line-through;
+  color: #6c757d;
+  border: 2px solid #c3e6cb;
+}
+
+li span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Button Styles inside Tasks */
+li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 8px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+li button.edit-btn {
+  color: #007bff;
+}
+
+li button.delete-btn {
+  color: #e39aa1;
+}
+
+li button.complete-btn {
+  color: #28a745;
+}
+
+li button:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+
+  #task-input,
+  #task-date {
+    font-size: 12px;
+  }
+
+  #add-task-btn {
+    font-size: 14px;
+  }
+
+  li span {
+    font-size: 12px;
+  }
+}
